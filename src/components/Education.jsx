@@ -20,11 +20,11 @@ const education = [
     color: 'neon-blue',
   },
   {
-    degree: 'SSC',
+    degree: 'ICSE',
     school: 'Chaturbhuj Narsee Memorial School',
     period: '2001 — 2016',
     gpa: null,
-    note: 'Foundational education',
+    note: 'Physics · Chemistry · Mathematics · Biology',
     color: 'neon-purple',
   },
 ]
