@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { FiMapPin, FiAward, FiBookOpen, FiGlobe } from 'react-icons/fi'
+import Meteors from './Meteors'
 
 const highlights = [
   { icon: FiMapPin, label: 'Location', value: 'Mumbai, MH 400053', color: 'text-neon-green' },
@@ -13,7 +14,8 @@ export default function About() {
   const [ref, inView] = useInView()
 
   return (
-    <section id="about" ref={ref} className="py-24">
+    <section id="about" ref={ref} className="py-24 relative overflow-hidden">
+      <Meteors count={18} />
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <motion.div

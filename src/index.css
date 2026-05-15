@@ -157,6 +157,25 @@ body {
   }
 }
 
+/* Meteor animation */
+.meteor-streak {
+  position: absolute;
+  height: 1.5px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--meteor-color, rgba(0,255,136,0.85)), transparent);
+  box-shadow: 0 0 8px 1px var(--meteor-glow, rgba(0,255,136,0.3));
+  transform: rotate(215deg) translateX(0);
+  opacity: 0;
+  animation: meteor linear infinite;
+}
+
+@keyframes meteor {
+  0%   { transform: rotate(215deg) translateX(0);      opacity: 0; }
+  5%   { opacity: 1; }
+  80%  { opacity: 0.6; }
+  100% { transform: rotate(215deg) translateX(-700px); opacity: 0; }
+}
+
 /* Input styles */
 .form-input {
   background: rgba(15, 23, 42, 0.8);
