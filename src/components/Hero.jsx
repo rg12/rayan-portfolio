@@ -65,21 +65,54 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          {/* Description */}
-          <motion.p
+          {/* Description — layered layout */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.45 }}
-            className="text-slate-300 text-lg sm:text-xl leading-[1.8] max-w-2xl mb-10 font-light tracking-wide"
+            className="max-w-2xl mb-10 space-y-5"
           >
-            4+ years delivering{' '}
-            <span className="text-white font-semibold">bug-free software</span> at scale.
-            Specialized in manual &amp; automation testing for web and mobile — working with
-            major clients like{' '}
-            <span className="text-white font-semibold">Axis Bank</span> and{' '}
-            <span className="text-white font-semibold">HDFC</span>.{' '}
-            <span className="text-neon-green font-semibold">ISTQB Foundation Level v4.0</span> certified.
-          </motion.p>
+            {/* Hook line */}
+            <p className="text-2xl sm:text-3xl font-light text-white/90 leading-snug tracking-tight">
+              I find bugs before your{' '}
+              <span className="italic font-normal text-neon-green">users</span> do.
+            </p>
+
+            {/* Descriptor */}
+            <p className="text-slate-400 text-base sm:text-lg leading-relaxed font-light">
+              4+ years of precision QA across banking, pharma &amp; health tech —
+              from exploratory manual testing to full{' '}
+              <span className="text-slate-300 font-medium">Selenium &amp; Playwright</span> automation suites.
+            </p>
+
+            {/* Client badges */}
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="text-slate-600 text-xs font-mono uppercase tracking-widest shrink-0">
+                Clients
+              </span>
+              <div className="w-px h-3 bg-slate-700" />
+              {['Axis Bank', 'HDFC', 'Cipla'].map((client, i) => (
+                <motion.span
+                  key={client}
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.55 + i * 0.08 }}
+                  className="px-3 py-1 rounded-full text-xs font-semibold border border-white/10 bg-white/5 text-slate-300 hover:border-neon-green/40 hover:bg-neon-green/8 hover:text-neon-green transition-all duration-200 cursor-default"
+                >
+                  {client}
+                </motion.span>
+              ))}
+            </div>
+
+            {/* Cert badge */}
+            <div className="flex items-center gap-2.5">
+              <span className="text-base">🏅</span>
+              <span className="text-sm font-semibold text-neon-green tracking-wide">
+                ISTQB Foundation Level v4.0
+              </span>
+              <span className="text-slate-600 text-xs font-mono">· Certified</span>
+            </div>
+          </motion.div>
 
           {/* CTAs */}
           <motion.div
