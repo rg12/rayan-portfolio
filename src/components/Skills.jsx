@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import {
-  SiSelenium, SiPython, SiMysql, SiTableau, SiJava,
+  SiSelenium, SiPython, SiMysql, SiQlik,
   SiJira, SiPostman, SiGit,
 } from 'react-icons/si'
+import { FaJava } from 'react-icons/fa'
 import { FiCheckSquare, FiTool, FiDatabase, FiBarChart2 } from 'react-icons/fi'
 
 const categories = [
@@ -31,7 +32,7 @@ const categories = [
     ],
     icons: [
       { Icon: SiSelenium, label: 'Selenium' },
-      { Icon: SiJava, label: 'Java' },
+      { Icon: FaJava, label: 'Java' },
       { Icon: SiPython, label: 'Python' },
       { Icon: SiGit, label: 'Git' },
       { Icon: SiJira, label: 'JIRA' },
@@ -62,7 +63,7 @@ const categories = [
       'Sprint Planning', 'Test Strategy', 'Documentation',
     ],
     icons: [
-      { Icon: SiTableau, label: 'Tableau' },
+      { Icon: SiQlik, label: 'QlikView' },
     ],
   },
 ]
