@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { FiArrowDown, FiLinkedin, FiMail, FiGithub } from 'react-icons/fi'
+import { FiArrowDown, FiLinkedin, FiMail } from 'react-icons/fi'
 import { useTypewriter } from '../hooks/useTypewriter'
+import ParticleCanvas from './ParticleCanvas'
 
 const roles = [
   'QA Engineer',
@@ -15,11 +16,14 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-center overflow-hidden dot-grid">
-      {/* Animated gradient orbs */}
+      {/* Particle canvas */}
+      <ParticleCanvas />
+
+      {/* Animated gradient orbs underneath particles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-green/8 rounded-full blur-[120px] animate-float" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-blue/8 rounded-full blur-[120px] animate-float" style={{ animationDelay: '3s' }} />
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-neon-purple/6 rounded-full blur-[100px] animate-float" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-neon-green/6 rounded-full blur-[130px] animate-float" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-neon-blue/6 rounded-full blur-[130px] animate-float" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-neon-purple/5 rounded-full blur-[100px] animate-float" style={{ animationDelay: '1.5s' }} />
       </div>
 
       <div className="relative max-w-6xl mx-auto px-6 pt-24 pb-20">
@@ -66,13 +70,15 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.45 }}
-            className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl mb-10"
+            className="text-slate-300 text-lg sm:text-xl leading-[1.8] max-w-2xl mb-10 font-light tracking-wide"
           >
-            4+ years delivering bug-free software at scale. Specialized in manual & automation testing
-            for web and mobile — working with major clients like{' '}
-            <span className="text-white font-medium">Axis Bank</span> and{' '}
-            <span className="text-white font-medium">HDFC</span>.{' '}
-            <span className="text-neon-green font-medium">ISTQB Foundation Level v4.0</span> certified.
+            4+ years delivering{' '}
+            <span className="text-white font-semibold">bug-free software</span> at scale.
+            Specialized in manual &amp; automation testing for web and mobile — working with
+            major clients like{' '}
+            <span className="text-white font-semibold">Axis Bank</span> and{' '}
+            <span className="text-white font-semibold">HDFC</span>.{' '}
+            <span className="text-neon-green font-semibold">ISTQB Foundation Level v4.0</span> certified.
           </motion.p>
 
           {/* CTAs */}
