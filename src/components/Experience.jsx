@@ -29,12 +29,13 @@ const jobs = [
     current: false,
     bullets: [
       'Executed manual testing across 40+ projects — analyzing requirements and designing test case scenarios for web desktop dashboards.',
+      'Worked with Cipla on testing pharmaceutical digital platforms — validating drug information systems, patient management workflows, and compliance-critical data flows.',
       'Covered the full spectrum of testing methodologies: sanity, regression, smoke, system, and integration testing.',
       'Ensured product compliance with functional requirements, delivering each testing environment with minimal deviations from client specs.',
       'Built and maintained dashboards in Power BI, QlikView, and Tableau to visualize testing results and defect metrics for stakeholders.',
       'Collaborated within Agile teams — sprint planning, daily stand-ups, and retrospectives — ensuring continuous delivery of quality products.',
     ],
-    tags: ['Manual Testing', 'Power BI', 'QlikView', 'Tableau', 'Agile/Scrum', 'Health Tech'],
+    tags: ['Manual Testing', 'Power BI', 'QlikView', 'Tableau', 'Agile/Scrum', 'Health Tech', 'Pharma (Cipla)'],
   },
 ]
 

@@ -6,7 +6,6 @@ const stats = [
   { value: 4, suffix: '+', label: 'Years Experience', color: 'text-neon-green' },
   { value: 40, suffix: '+', label: 'Projects Delivered', color: 'text-neon-blue' },
   { value: 2, suffix: '', label: 'Major Banks Served', color: 'text-neon-purple' },
-  { value: 100, suffix: '%', label: 'Client Satisfaction', color: 'text-neon-green' },
 ]
 
 function Counter({ end, suffix, color, inView }) {
@@ -42,7 +41,7 @@ export default function Stats() {
   return (
     <section ref={ref} className="py-16 border-y border-white/5">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
